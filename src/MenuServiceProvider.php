@@ -98,12 +98,7 @@ class MenuServiceProvider implements ServiceProviderInterface
                 return $twig;
             });
 
-            $app['twig.loader.filesystem'] = $app->extend('twig.loader.filesystem',
-                function (\Twig_Loader_Filesystem $loader) use ($app) {
-                    $loader->addPath(__DIR__ . '/../../Resources/views');
-
-                    return $loader;
-                });
+            $app['twig.loader.filesystem']->addPath(__DIR__ . '/../../Resources/views');
         }
     }
 }
