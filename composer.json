@@ -1,7 +1,7 @@
 {
   "name": "boxedcode/silex-knp-menu-service-provider",
   "type": "library",
-  "description": "A Silex Knp Menu service provider which is compatible with Silex 2.0",
+  "description": "A Silex Knp Menu service provider which is compatible with Silex 2.*",
   "authors": [
     {
       "name": "Kamba Abudu",
