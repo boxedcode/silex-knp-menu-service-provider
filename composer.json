@@ -1,0 +1,24 @@
+{
+  "name": "boxedcode/silex-knp-menu-service-provider",
+  "type": "library",
+  "description": "A Silex Knp Menu service provider which is compatible with Silex 2.0",
+  "authors": [
+    {
+      "name": "Kamba Abudu",
+      "email": "kabudu@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.0",
+    "silex/silex": ">=2.0.x-dev",
+    "knplabs/knp-menu": "v2.1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "BoxedCode\\Silex\\Knp\\": ["src/"]
+    }
+  }
+}
