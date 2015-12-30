@@ -94,16 +94,10 @@ class MenuServiceProvider implements ServiceProviderInterface
 
             $app['twig'] = $app->extend('twig', function (\Twig_Environment $twig) use ($app) {
                 $twig->addExtension($app['knp_menu.twig_extension']);
+                $app['twig.loader.filesystem']->addPath($app['knp_menu.views_path']);
 
                 return $twig;
             });
-
-            $app['twig.loader.filesystem'] = $app->extend('twig.loader.filesystem',
-                function (\Twig_Loader_Filesystem $loader) use ($app) {
-                    $loader->addPath(__DIR__ . '/../../Resources/views');
-
-                    return $loader;
-                });
         }
     }
 }
